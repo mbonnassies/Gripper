@@ -29,7 +29,7 @@ void setup()
   digitalWrite(in1, HIGH);
   digitalWrite(in2, LOW);
 
- Serial.begin(115200);
+  Serial.begin(115200);
 
   uint32_t currentFrequency;
     
