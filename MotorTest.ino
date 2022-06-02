@@ -86,11 +86,10 @@ void loop() {
 
   delay(100); 
 
-   
+  if (MotorSpeed > 255) {MotorSpeed=255;} //Shouldn't happen but just in case
+  if (MotorSpeed < 8) {MotorSpeed=0;} //To prevent buzzing
   
   analogWrite(enA, MotorSpeed); // Make the motor turn at the speed calculated from joystick position
  
-  if (MotorSpeed > 255) {MotorSpeed=255;} //Shouldn't happen but just in case
-  if (MotorSpeed < 8) {MotorSpeed=0;} //To prevent buzzing
   
 }
